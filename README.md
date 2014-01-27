@@ -4,9 +4,9 @@ This a place for me to keep track of what's working, what's not, and any workaro
 
 ## Step #1: buy some helpful accessories
 
-* buy a wireless adapter, OpenBSD does not have a driver for the built in wifi chip
-* buy a thumb drive to use for installation
-* buy a usb hard drive for backups between upgrades
+* Buy a [urtwn](http://www.amazon.com/Edimax-EW-7811Un-Wireless-Adapter-Wizard/dp/B003MTTJOY/ref=sr_1_1?ie=UTF8&qid=1390798318&sr=8-1&keywords=usb+wifi) based wireless networking adapter and/or an [axe](http://www.amazon.com/Apple-MC704ZM-A-Ethernet-Adapter/dp/B00486070K/ref=sr_1_3?ie=UTF8&qid=1390798382&sr=8-3&keywords=apple+ethernet+adapter) based wired adapter. OpenBSD [does not support](https://github.com/bonds/openbsd_on_a_macbookair51/issues/2) the builtin wireless chipset, so you'll need something for internet access.
+* Buy a thumb drive to use for installation.
+* Buy a usb hard drive for backups between upgrades.
 
 ## Step #2: download OpenBSD and create a USB installer
 
@@ -14,18 +14,51 @@ This a place for me to keep track of what's working, what's not, and any workaro
 * download the matching ports source
 * download the matching kernel source
 * download the matching userland source
+* download the urtwn firmware
 * install on a USB drive using VMware
 * copy the installation stuff onto the USB drive
+  * installer files
+  * source code
+  * firmware
 
 ## Step #3: install OpenBSD on your MacbookAir5,1
 
 * boot to usb
-* race through the installation process before the screen goes blank
+* enable full disk encryption
+* overcome obstacle 1: [the screen goes blank after a while](https://github.com/bonds/openbsd_on_a_macbookair51/issues/1)
+* finish install, reboot, and login
+* copy sources and untar them in the right places
+* install the wireless firmware
+* configure the wireless adapter
 
 ## Step #4: disable features that cause hangs
 
 * disable acpivout
 * disable apmd
+
+## Stuff That Works Awesome
+
+* OpenBSD 5.5-beta 2014-01-17
+* Gnome 3, with some exceptions noted below
+* sound
+* multitouch trackpad with two-finger scroll, 3 finger right-click ??
+* adjust display brightness
+* manually adjust cpu speed from the command line
+
+## Stuff That's Unreliable
+
+* wireless networking adapters overheat and disconnect themselves
+* Seahorse, the Gnome default password manager, crashes all the time
+* Empathy, the Gnome default chat client, crashes all the time
+* adjusting volume level in Gnome too quickly leads to the volume set vs displayed to get out of sync
+
+## Stuff That Does Not Work At All
+
+* built-in wireless
+* automatic cpu speed adjustments based on usage
+* suspend and resume in general, suspend and resume on lid close in particular
+* keyboard backlight
+* adjusting display brightness using the built-in function keys
 
 ## Notes
 
