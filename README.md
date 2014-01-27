@@ -79,5 +79,6 @@ This a place for me to keep track of what's working, what's not, and any workaro
 
 ## Further Reading
 
-* Joshua Stein
-* donate to OpenBSD
+* [donate to OpenBSD](http://www.openbsdfoundation.org/donations.html)
+* [Joshua Stein's notes](https://gist.github.com/jcs/5573685) on getting OpenBSD and Macbook Airs living together nicely.
+* Post by Jashua Stein about [his work on the multitouch driver](http://comments.gmane.org/gmane.os.openbsd.tech/34916).
