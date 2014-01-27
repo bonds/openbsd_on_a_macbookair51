@@ -2,14 +2,14 @@
 
 This a place for me to keep track of what's working, what's not, and any workarounds I'm using.
 
-## Step #1: buy or borrow some helpful accessories
+## Step #1: Buy or borrow some helpful accessories
 
 * A [urtwn](http://www.amazon.com/Edimax-EW-7811Un-Wireless-Adapter-Wizard/dp/B003MTTJOY/ref=sr_1_1?ie=UTF8&qid=1390798318&sr=8-1&keywords=usb+wifi) based wireless networking adapter and/or an [axe](http://www.amazon.com/Apple-MC704ZM-A-Ethernet-Adapter/dp/B00486070K/ref=sr_1_3?ie=UTF8&qid=1390798382&sr=8-3&keywords=apple+ethernet+adapter) based wired adapter. OpenBSD [does not support](https://github.com/bonds/openbsd_on_a_macbookair51/issues/2) the builtin wireless chipset, so you'll need something for internet access.
 * A thumb drive to use for installation. I rather like this [USB adapter](http://www.amazon.com/ELAGO-Mobile-Reader-World-Smallest-EL-RD-012/dp/B002K7EJDK/ref=pd_sim_e_1) combined with this [SDHC card](http://www.amazon.com/SanDisk-microSDXC-Memory-Adapter-SDSDQU-064G-AFFP-A/dp/B009QZH6JS/ref=pd_bxgy_e_text_y), myself.
 * A USB hard drive for backups between upgrades.
 * A spare Mac running OS X and VMware Fusion for creating the USB installer. Alternatively you could burn CDs and boot off a CD drive.
 
-## Step #2: download OpenBSD and create a USB installer
+## Step #2: Download OpenBSD and create a USB installer
 
 * Download the [OpenBSD 5.5-beta 2014-01-17 amd64 snapshot CD iso image](http://ftp3.usa.openbsd.org/pub/OpenBSD/snapshots/amd64/install55.iso).
 * Download the [matching ports source](http://ftp3.usa.openbsd.org/pub/OpenBSD/snapshots/ports.tar.gz).
@@ -25,7 +25,7 @@ This a place for me to keep track of what's working, what's not, and any workaro
   * source code
   * firmware
 
-## Step #3: install OpenBSD on your MacbookAir5,1
+## Step #3: Install OpenBSD on your MacbookAir5,1
 
 * boot to usb
 * enable full disk encryption
@@ -35,7 +35,7 @@ This a place for me to keep track of what's working, what's not, and any workaro
 * install the wireless firmware
 * configure the wireless adapter
 
-## Step #4: disable features that cause hangs
+## Step #4: Disable features that cause hangs
 
 * [disable acpivout to avoid hangs](https://github.com/bonds/openbsd_on_a_macbookair51/issues/4) when running X-Windows
 * [disable apmd to avoid hangs](https://github.com/bonds/openbsd_on_a_macbookair51/issues/3) when running X-Windows
