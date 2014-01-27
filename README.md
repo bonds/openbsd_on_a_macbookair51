@@ -2,22 +2,26 @@
 
 This a place for me to keep track of what's working, what's not, and any workarounds I'm using.
 
-## Step #1: buy some helpful accessories
+## Step #1: buy or borrow some helpful accessories
 
-* Buy a [urtwn](http://www.amazon.com/Edimax-EW-7811Un-Wireless-Adapter-Wizard/dp/B003MTTJOY/ref=sr_1_1?ie=UTF8&qid=1390798318&sr=8-1&keywords=usb+wifi) based wireless networking adapter and/or an [axe](http://www.amazon.com/Apple-MC704ZM-A-Ethernet-Adapter/dp/B00486070K/ref=sr_1_3?ie=UTF8&qid=1390798382&sr=8-3&keywords=apple+ethernet+adapter) based wired adapter. OpenBSD [does not support](https://github.com/bonds/openbsd_on_a_macbookair51/issues/2) the builtin wireless chipset, so you'll need something for internet access.
-* Buy a thumb drive to use for installation. I rather like this [USB adapter](http://www.amazon.com/ELAGO-Mobile-Reader-World-Smallest-EL-RD-012/dp/B002K7EJDK/ref=pd_sim_e_1) combined with this [SDHC card](http://www.amazon.com/SanDisk-microSDXC-Memory-Adapter-SDSDQU-064G-AFFP-A/dp/B009QZH6JS/ref=pd_bxgy_e_text_y), myself.
-* Buy a usb hard drive for backups between upgrades.
+* A [urtwn](http://www.amazon.com/Edimax-EW-7811Un-Wireless-Adapter-Wizard/dp/B003MTTJOY/ref=sr_1_1?ie=UTF8&qid=1390798318&sr=8-1&keywords=usb+wifi) based wireless networking adapter and/or an [axe](http://www.amazon.com/Apple-MC704ZM-A-Ethernet-Adapter/dp/B00486070K/ref=sr_1_3?ie=UTF8&qid=1390798382&sr=8-3&keywords=apple+ethernet+adapter) based wired adapter. OpenBSD [does not support](https://github.com/bonds/openbsd_on_a_macbookair51/issues/2) the builtin wireless chipset, so you'll need something for internet access.
+* A thumb drive to use for installation. I rather like this [USB adapter](http://www.amazon.com/ELAGO-Mobile-Reader-World-Smallest-EL-RD-012/dp/B002K7EJDK/ref=pd_sim_e_1) combined with this [SDHC card](http://www.amazon.com/SanDisk-microSDXC-Memory-Adapter-SDSDQU-064G-AFFP-A/dp/B009QZH6JS/ref=pd_bxgy_e_text_y), myself.
+* A USB hard drive for backups between upgrades.
+* A spare Mac running OS X and VMware Fusion for creating the USB installer. Alternatively you could burn CDs and boot off a CD drive.
 
 ## Step #2: download OpenBSD and create a USB installer
 
-* download the OpenBSD 5.5-beta 2014-01-17 amd64 snapshot
-* download the matching ports source
-* download the matching kernel source
-* download the matching userland source
-* download the urtwn firmware
-* install on a USB drive using VMware
-* copy the installation stuff onto the USB drive
-  * installer files
+* Download the [OpenBSD 5.5-beta 2014-01-17 amd64 snapshot CD iso image](http://ftp3.usa.openbsd.org/pub/OpenBSD/snapshots/amd64/install55.iso).
+* Download the [matching ports source](http://ftp3.usa.openbsd.org/pub/OpenBSD/snapshots/ports.tar.gz).
+* Download the [matching kernel source](http://ftp3.usa.openbsd.org/pub/OpenBSD/srcsys.tar.gz).
+* Download the [matching userland source](http://ftp3.usa.openbsd.org/pub/OpenBSD/src.tar.gz).
+* Download the [urtwn firmware](http://firmware.openbsd.org/firmware/urtwn-firmware-1.1p1.tgz).
+* Running OSX on a spare Mac, create a new virtual machine and [configure VMware Fusion to boot off your USB drive](http://techrem.blogspot.com/2012/12/add-physical-disk-to-vmware-fusion.html)
+* configure your virtual machine to use the OpenBSD iso as a CD drive and your USB drive as the hard drive and then boot the virtual machine.
+* Install OpenBSD on your USB drive using the virtual machine you configured.
+* Copy the additional installation files you'll need onto the USB drive. You can do this at the end of OpenBSD installtion onto the USB drive, when you get a shell prompt right before reboot. Or you could do this after you reboot.
+  * ````$ mount /dev/cd0a /mnt````
+  * ````$ cp -R /mnt/5.5/ /````
   * source code
   * firmware
 
