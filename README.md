@@ -51,7 +51,7 @@ This a place for me to keep track of what's working, what's not, and any workaro
 
 ## Stuff That's Unreliable
 
-* wireless networking adapters overheat and disconnect themselves
+* [wireless networking adapters overheat and disconnect themselves](https://github.com/bonds/openbsd_on_a_macbookair51/issues/5)
 * Seahorse, the Gnome default password manager, crashes all the time
 * Empathy, the Gnome default chat client, crashes all the time
 * adjusting volume level in Gnome too quickly leads to the volume set vs displayed to get out of sync
