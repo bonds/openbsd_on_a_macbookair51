@@ -82,3 +82,4 @@ This a place for me to keep track of what's working, what's not, and any workaro
 * [donate to OpenBSD](http://www.openbsdfoundation.org/donations.html)
 * [Joshua Stein's notes](https://gist.github.com/jcs/5573685) on getting OpenBSD and Macbook Airs living together nicely.
 * Post by Joshua Stein about [his work on the multitouch driver](http://comments.gmane.org/gmane.os.openbsd.tech/34916).
+* [MacBook Air 5.1 specs](http://apple-history.com/mb_air_11_mid_12)
