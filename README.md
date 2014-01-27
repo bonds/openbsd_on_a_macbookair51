@@ -33,8 +33,8 @@ This a place for me to keep track of what's working, what's not, and any workaro
 
 ## Step #4: disable features that cause hangs
 
-* disable acpivout
-* disable apmd
+* [disable acpivout to avoid hangs](https://github.com/bonds/openbsd_on_a_macbookair51/issues/4) when running X-Windows
+* [disable apmd to avoid hangs](https://github.com/bonds/openbsd_on_a_macbookair51/issues/3) when running X-Windows
 
 ## Stuff That Works Awesome
 
@@ -63,6 +63,8 @@ This a place for me to keep track of what's working, what's not, and any workaro
 ## Notes
 
 * This guide will soon be out of date. OpenBSD is a moving target. Sorry.
+* The OpenBSD devs do not come here. This is not an official anything. You (the reader) and I are probably the only ones looking at this. That is to say, don't file bugs here in the hope someone will notice and/or do something about them. In fact, probably best not to file bugs here in general, let me do it. ;)
+* I am an OpenBSD newb. I'm just stumbling along, piecing together what I can through trial, error, Googling, and asking questions. I don't know the OpenBSD innards at all. Take all this with a grain of salt.
 * Different Macbook Air models require different steps. Starting with the MacbookAir6,1 or later you shoudln't even try unless you're an OpenBSD developer trying to hack on the kernel.
 
 ## Why
