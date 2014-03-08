@@ -24,6 +24,7 @@ This a place for me to keep track of what's working, what's not, and any workaro
   * ````$ cp -R /mnt/5.5/ /````
   * source code
   * firmware
+* OR using a BSD box, follow these instructions for creating a USB installer: http://undeadly.org/cgi?action=article&sid=20140225072408
 
 ## Step #3: Install OpenBSD on your MacbookAir5,1
 
